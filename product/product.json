@@ -1,0 +1,194 @@
+[
+    {
+        "id": "01",
+        "brand": "Creed",
+        "product": "Aventus for Her",
+        "image": "./img/creed/muestra/aventusForHer.png",
+        "price": 189000,
+        "stock": 15
+    },
+    {
+        "id": "02",
+        "brand": "Creed",
+        "product": "Aventus",
+        "image": "./img/creed/muestra/aventus.png",
+        "price": 173000,
+        "stock": 11
+    },
+    {
+        "id": "03",
+        "brand": "Creed",
+        "product": "Erolfa",
+        "image": "./img/creed/muestra/erolfa.png",
+        "price": 145000,
+        "stock": 16
+    },
+    {
+        "id": "04",
+        "brand": "Creed",
+        "product": "Green Irish Tweed",
+        "image": "./img/creed/muestra/greenIrishTweed.png",
+        "price": 185000,
+        "stock": 9
+    },
+    {
+        "id": "05",
+        "brand": "Creed",
+        "product": "Himalaya",
+        "image": "./img/creed/muestra/himalaya.png",
+        "price": 134800,
+        "stock": 5
+    },
+    {
+        "id": "06",
+        "brand": "Creed",
+        "product": "Millesime Imperial",
+        "image": "./img/creed/muestra/millesimeImperial.png",
+        "price": 114000,
+        "stock": 19
+    },
+    {
+        "id": "07",
+        "brand": "Creed",
+        "product": "Neroli Sauvage",
+        "image": "./img/creed/muestra/neroliSauvage.png",
+        "price": 167000,
+        "stock": 12
+    },
+    {
+        "id": "08",
+        "brand": "Creed",
+        "product": "Original Santal",
+        "image": "./img/creed/muestra/originalSantal.png",
+        "price": 95300,
+        "stock": 24
+    },
+    {
+        "id": "09",
+        "brand": "Montale París",
+        "product": "Oud Dream",
+        "image": "./img/montaleParis/muestra/oud-dream.jpg",
+        "price": 84700,
+        "stock": 35
+    },
+    {
+        "id": "10",
+        "brand": "Montale París",
+        "product": "Oudmazing",
+        "image": "./img/montaleParis/muestra/oudmazing.jpg",
+        "price": 72500,
+        "stock": 28
+    },
+    {
+        "id": "11",
+        "brand": "Montale París",
+        "product": "Aoud Forest",
+        "image": "./img/montaleParis/muestra/aoudForest.jpg",
+        "price": 81100,
+        "stock": 23
+    },
+    {
+        "id": "12",
+        "brand": "Montale París",
+        "product": "Aqua Palma",
+        "image": "./img/montaleParis/muestra/aquaPalma.jpg",
+        "price": 91400,
+        "stock": 32
+    },
+    {
+        "id": "13",
+        "brand": "Montale París",
+        "product": "Arabians Tonka",
+        "image": "./img/montaleParis/muestra/arabiansTonka.jpg",
+        "price": 65800,
+        "stock": 22
+    },
+    {
+        "id": "14",
+        "brand": "Montale París",
+        "product": "Bakhoor",
+        "image": "./img/montaleParis/muestra/bakhoor.jpg",
+        "price": 72900,
+        "stock": 18
+    },
+    {
+        "id": "15",
+        "brand": "Montale París",
+        "product": "Candy Rose",
+        "image": "./img/montaleParis/muestra/candy-rose.jpg",
+        "price": 83000,
+        "stock": 0
+    },
+    {
+        "id": "16",
+        "brand": "Montale París",
+        "product": "Musk to Musk Argent",
+        "image": "./img/montaleParis/muestra/musk-to-musk-argent.jpg",
+        "price": 69300,
+        "stock": 37
+    },
+    {
+        "id": "17",
+        "brand": "Parfums de Marly",
+        "product": "Byerley",
+        "image": "./img/parfumsDeMarly/muestra/byerley.png",
+        "price": 137600,
+        "stock": 8
+    },
+    {
+        "id": "18",
+        "brand": "Parfums de Marly",
+        "product": "Carlisle",
+        "image": "./img/parfumsDeMarly/muestra/carlisle.png",
+        "price": 127000,
+        "stock": 1
+    },
+    {
+        "id": "19",
+        "brand": "Parfums de Marly",
+        "product": "Darley",
+        "image": "./img/parfumsDeMarly/muestra/darley.png",
+        "price": 147500,
+        "stock": 3
+    },
+    {
+        "id": "20",
+        "brand": "Parfums de Marly",
+        "product": "Layton Exclusif",
+        "image": "./img/parfumsDeMarly/muestra/laytonExclusif.png",
+        "price": 151200,
+        "stock": 2
+    },
+    {
+        "id": "21",
+        "brand": "Parfums de Marly",
+        "product": "Godolphhin",
+        "image": "./img/parfumsDeMarly/muestra/godolphin.png",
+        "price": 115600,
+        "stock": 6
+    },
+    {
+        "id": "22",
+        "brand": "Parfums de Marly",
+        "product": "Greenley",
+        "image": "./img/parfumsDeMarly/muestra/greenley.png",
+        "price": 134800,
+        "stock": 4
+    },
+    {
+        "id": "23",
+        "brand": "Parfums de Marly",
+        "product": "Athalia",
+        "image": "./img/parfumsDeMarly/muestra/athalia.png",
+        "price": 128500,
+        "stock": 7
+    },
+    {
+        "id": "24",
+        "brand": "Parfums de Marly",
+        "product": "Cassili",
+        "image": "./img/parfumsDeMarly/muestra/cassili.png",
+        "price": 138100,
+        "stock": 10
+    }
+]

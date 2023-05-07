@@ -1,0 +1,256 @@
+@charset "UTF-8";
+/* GENERALES */
+/* Fuente */
+@import url("https://fonts.googleapis.com/css2?family=Moon+Dance&family=Poppins:ital,wght@1,200&family=Quicksand:wght@300&display=swap");
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Fuente predeterminada */
+body {
+    font-family: "Quicksand", sans-serif;
+}
+
+.logo {
+    border: 2px solid black;
+    padding: 5px;
+}
+
+/* Título de todas las páginas del sitio web */
+.titlePages {
+    background-image: url(../img/carousel/modelo.jpg);
+    background-size: 100% auto;
+    padding: 5%;
+}
+
+.tituloPagesLogin {
+    text-align: center;
+    margin: 20px;
+}
+
+header {
+    background-color: white;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 1px solid black;
+}
+
+.login {
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+main .tituloSecundario {
+    text-align: center;
+    margin: 20px;
+}
+
+main .gridContainer {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    gap: 10px;
+    width: 90%;
+    margin: 0 auto;
+    grid-template-areas: "buscar buscar" "aside productos";
+    grid-template-rows: auto;
+}
+
+main .gridContainer .buscar {
+    grid-area: buscar;
+}
+
+main .gridContainer .aside {
+    grid-area: aside;
+    display: flex;
+    flex-direction: column;
+    margin: 7px;    
+    border: 1px solid black;
+    padding: 10px;
+}
+
+main .gridContainer .aside{
+    display: flex;
+    flex-direction: column;
+    margin: 7px;
+}
+
+main .gridContainer .aside .formSearch label {
+    margin: 10px;
+}
+
+main .gridContainer .productos {
+    grid-area: productos;
+    border: 1px solid black;
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+main .gridContainer .productos .boxProduc {
+    background-color: #f5f5f5;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 10px;
+    flex-direction: column;
+    width: 300px;
+    height: 400px;
+    border: 1px solid black;
+    color: black;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    transition: 0.3s;
+}
+
+main .gridContainer .productos .boxProduc:hover {
+    transform: scale(1.02);
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 15px 40px, rgba(0, 0, 0, 0.23) 0px 8px 8px;
+}
+
+main .gridContainer .productos .boxProduc:active {
+    box-shadow: none;
+    transform: scale(0.98);
+}
+
+main .gridContainer .productos .boxProduc h3 {
+    margin-top: 10px;
+    font-size: 23px;
+    font-weight: 900;
+}
+
+main .gridContainer .productos .boxProduc img {
+    height: 50%;
+}
+
+main .gridContainer .productos .boxProduc .buy {
+    border: 1px solid goldenrod;
+    background-color: #f5f5f5;
+    text-decoration: none;
+    color: black;
+    padding: 4px 10px;
+    margin-bottom: 10px;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.mainLogin {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.mainLogin .formLogin {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 80px;
+    margin: 10px;
+    width: 300px;
+    border: 2px solid black;
+}
+
+.mainLogin .formLogin label {
+    margin: 7px;
+}
+
+.mainLogin .formLogin label input {
+    padding-left: 5px;
+}
+
+.mainLogin .formLogin button {
+    margin: 15px;
+    padding: 4px;
+    background-color: black;
+    color: white;
+    font-weight: 700;
+}
+
+.mensaje {
+    color: red;
+    font-size: 17px;
+}
+
+.shopCartBox {
+    display: flex;
+    justify-content: space-around;
+    border: 2px solid black;
+    margin: 40px;
+    align-items: center;
+}
+
+.shopCartBox h3 {
+    font-size: 60px;
+}
+
+.shopCartBox img {
+    width: 8%;
+    padding: 10px;
+}
+
+.shopCartBox p {
+    font-size: 25px;
+}
+
+.shopCartBox .pricePrd {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    font-weight: 600;
+    padding: 7px;
+}
+
+.credit-card {
+    border: .7px solid #777;
+    border-radius: 8px;
+    width: 50%;
+    margin: 20px auto;
+}
+
+.form-control input, input[type="date"] {
+    font-size: 1.3rem;
+}
+
+.totalBuy {
+    text-align: end;
+    margin: 0 45px 40px 0;
+}
+
+.totalBuy h3 {
+    font-size: 50px;
+}
+
+.quantity {
+    display: flex;
+    align-items: center;
+}
+
+.removePrd {
+    text-decoration: none;
+    border: 1px solid black;
+    padding: 3px;
+    font-size: 30px;
+    margin: 15px;
+}
+
+.pay {
+    display: flex;
+    justify-content:space-around;
+    margin-bottom: 50px;
+}
+.btnPay {
+    background-color: rgb(68, 68, 245);
+    color: white;
+    font-size: 40px;
+    padding: 10px;
+}
+
+.inactive {
+    display: none;
+}

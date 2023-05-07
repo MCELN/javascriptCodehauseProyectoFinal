@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous" />
+    <link rel="shortcut icon" href="./img/favicon.png" type="image/x-icon" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <link rel="stylesheet" href="./css/style.css" />
+    <script src="https://kit.fontawesome.com/0bb154f3a0.js" crossorigin="anonymous"></script>
+    <title>Fragancias de Nicho | Los perfumes más exquisitos</title>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <a class="navbar-brand logo" href="#">FdN</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse login" id="navbarNavAltMarkup">
+                    <div class="navbar-nav">
+                        <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+                    </div>
+                    <div class="dropdown">
+                        <a class="nav-link login loginUser" id="navbarDropdownMenuLink" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false" href="#">Iniciar sesión</a>
+                        <div class="inactive" id="dropdownOnOff">
+                            <ul class="dropdown-menu" id="userProfile">
+                                <li>
+                                    <a href="#" class="dropdown-item" id="showCart">Carrito</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="dropdown-item" id="logOut">Cerrar sesión</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <h1 class="titlePages">Fragancias de Nicho</h1>
+        <section id="initial">
+            <h2 class="tituloSecundario">Nuestros productos</h2>
+            <div class="gridContainer">
+                <div class="buscar">
+                    <input type="search" name="search" placeholder="Busqueda..." value="" id="search" />
+                    <label for="search">Buscar</label>
+                </div>
+                <aside class="aside">
+                    <label>
+                        <input type="checkbox" name="brand" value="Creed" /> Creed
+                    </label>
+                    <label>
+                        <input type="checkbox" name="brand" value="Montale París" />
+                        Montale Paris
+                    </label>
+                    <label>
+                        <input type="checkbox" name="brand" value="Parfums de Marly" />
+                        Parfums de Marly
+                    </label>
+                </aside>
+                <div class="productos" id="parfums">
+                    <!-- Contenido dinámico -->
+                </div>
+            </div>
+        </section>
+        <section class="mainLogin inactive" id="login">
+            <h2 class="tituloPagesLogin">Iniciar Sesión.</h2>
+            <form class="formLogin" id="formLogin">
+                <label for="userLog">Usuario: <input type="text" name="userLog" id="userLog" value="" /></label>
+                <label for="passLog">Password:
+                    <input type="password" name="passLog" id="passLog" value="" /></label>
+                <label for="remember"><input type="checkbox" name="remember" id="remember" />
+                    Recordar</label>
+                <button type="submit" id="btnLogin">Iniciar Sesión</button>
+            </form>
+            <p>
+                <a id="register" href="#">Registrar</a> si aún no se ha registrado.
+            </p>
+        </section>
+        <section class="mainLogin register inactive">
+            <h2 class="tituloPagesLogin">Registrate</h2>
+            <form class="formLogin" id="formReg">
+                <label for="nameReg">Nombre: <input type="text" name="nameReg" id="nameReg" value="" /></label>
+                <label for="lastNameReg">Apellido:
+                    <input type="text" name="lastNameReg" id="lastNameReg" value="" /></label>
+                <label for="emailReg">E-Mail: <input type="email" name="emailReg" id="emailReg" value="" /></label>
+                <label for="userReg">Usuario: <input type="text" name="userReg" id="userReg" value="" /></label>
+                <label for="passReg">Password:
+                    <input type="password" name="passReg" id="passReg" value="" /></label>
+                <label for="passCReg">Confirme Password:
+                    <input type="password" name="passCReg" id="passCReg" value="" /></label>
+                <button type="submit" id="btnReg">Guardar</button>
+            </form>
+        </section>
+        <section class="shopCartPage inactive">
+            <h2 class="tituloPagesLogin">Tu carrito!</h2>
+            <div class="shopCartBuy" id="shopCartBuy">
+                <!-- Contenido dinámico. -->
+            </div>
+            <div class="pay">
+                <button class="btnPay" id="btnPay">Pagar</button>
+                <div class="totalBuy" id="totalBuy"></div>
+            </div>
+        </section>
+        <section class="creditCard inactive">
+            <div class="contenedor credit-card">
+                <h3>Finalizar Compra</h3>
+                <form action="" id="credit-card">
+                    <div class="form-control">
+                        <label for="card-number">Nombre del titular</label>
+                        <input type="text" placeholder="Max Power" id="titular" required />
+                    </div>
+                    <div class="form-control">
+                        <label for="card-number">Número de tarjeta</label>
+                        <input type="text" placeholder="0000 000 000 0000" id="card-number" required />
+                    </div>
+                    <div class="form-control">
+                        <label for="ccv">Código de seguridad</label>
+                        <input type="text" id="ccv" placeholder="000" maxlength="3" required />
+                    </div>
+                    <div class="form-control">
+                        <div class="icons">
+                            <i class="fa-brands fa-cc-visa"></i>
+                            <i class="fa-brands fa-cc-amex"></i>
+                            <i class="fa-brands fa-cc-diners-club"></i>
+                            <i class="fa-brands fa-cc-mastercard"></i>
+                        </div>
+                    </div>
+                    <div class="form-control">
+                        <input type="submit" value="Comprar" class="btn btn-success" id="paid" />
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+        crossorigin="anonymous"></script>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <script src="https://cdn.jsdelivr.net/npm/luxon@3.3.0/build/global/luxon.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/cleave.js@1.6.0/dist/cleave.min.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+
+</html>
