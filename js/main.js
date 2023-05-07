@@ -49,7 +49,7 @@ let usersArr = JSON.parse(localStorage.getItem("users")) || [],
 
 //Carga en el array products los productos guardados en el archivo json.
 async function loadProducts() {
-    const response = await fetch("../product/product.json");
+    const response = await fetch("./product/product.json");
     const productos = await response.json();
     localStorage.setItem("productos", JSON.stringify(productos));
     products = JSON.parse(localStorage.getItem("productos"));
