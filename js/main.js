@@ -238,7 +238,6 @@ function showProducts(arrProducts) {
         buyProduct.addEventListener("click", (e) => {
             e.preventDefault();
             const productId = e.target.id;
-            console.log(productId);
             loginTF ? addShopCart(productId) : showHTMLLogin();
         });
     });
@@ -256,9 +255,13 @@ function showMyShopCart(arrProductsShopCart) {
                 <h3>${brand}</h3>
                 <img src=${image} alt=${product}>
                 <p>${product}</p>
-                <div class="quantity">
-                    <p>Cantidad: ${stock} </p>
-                    <button class="removePrd" id="${id}"> X </button>
+                <div class"modifyQuantity">
+                    <div class="quantity">
+                        <button class="addPrd buttonAddRem" id="more-${id}"> + </button>
+                        <p>Cantidad: ${stock} </p>
+                        <button class="removePrd buttonAddRem" id="less-${id}"> - </button>
+                    </div>
+                    <button class="removeAll" id="all-${id}"> Borrar </button>
                 </div>
                 <div class="pricePrd">
                     <p>Precio unidad</p>
@@ -275,10 +278,26 @@ function showMyShopCart(arrProductsShopCart) {
     removeBtn.forEach((removeProduct) => {
         removeProduct.addEventListener("click", (e) => {
             const productId = e.target.id;
-            console.log(productId);
-            removeShopCart(productId);
+            removeShopCart(productId.split('-')[1]);
         });
     });
+
+    const addBtn = document.querySelectorAll("button.addPrd");
+    addBtn.forEach((addProduct) => {
+        addProduct.addEventListener("click", (e) => {
+            const productId = e.target.id;
+            addOneProduct(productId.split('-')[1]);
+        });
+    });
+
+    const removeAllBtn = document.querySelectorAll("button.removeAll");
+    removeAllBtn.forEach((removeAllProduct) => {
+        removeAllProduct.addEventListener("click", (e) => {
+            const productId = e.target.id;
+            deleteFromCart(productId.split('-')[1]);
+        });
+    });
+
     if(shopCartBuy.innerHTML === "") {
         shopCartBuy.innerHTML = "<h3 class='tituloSecundario'>No tiene productos cargados en su carrito.</h3>"
         btnPay.classList.add("inactive");
@@ -306,7 +325,7 @@ function addShopCart(id) {
             .find((users) => users.user === currentUser)
             .shopCart;
         saveLSProd(products);
-        saveLS(usersArr);
+        saveLS(usersArr);        
         Swal.fire({
             position: "center",
             icon: "success",
@@ -339,10 +358,52 @@ function addShopCart(id) {
         });
     }
 }
+//Agregar producto desde el carrito.
+function addOneProduct(id) {
+    let buyPrd = products.find((parfum) => parfum.id === id);
+    if(buyPrd.stock != 0){
+    usersArr
+        .find((users) => users.user === currentUser)
+        .shopCart.find((el) => el.id === id).stock++;
+    buyPrd.stock--;
+    myShopCart = usersArr
+        .find((users) => users.user === currentUser)
+        .shopCart;
+    saveLSProd(products);
+    saveLS(usersArr);
+    myShopCart = usersArr
+        .find((users) => users.user === currentUser)
+        .shopCart;
+    showHTMLShopCart();
+    showMyShopCart(myShopCart)
+    } else {
+        Swal.fire({
+            icon: "error",
+            title: "Sin Stock",
+            text: `Lo sentimos. ${buyPrd.product} está sin stock.`,
+        });
+    }
+}
+//Borrar del carrito
+function deleteFromCart (id) {
+    let removeStock = usersArr.find(users => users.user === currentUser).shopCart.find(item => item.id === id);
+    products.find((parfum) => parfum.id === id).stock += removeStock.stock;
+    removeStock.stock = 0;
+    let objRemove = usersArr.find(users => users.user === currentUser).shopCart.findIndex(el => el.id === id);
+    usersArr.find(users => users.user === currentUser).shopCart.splice(objRemove, 1);
+    myShopCart = [];
+        saveLSProd(products);
+        saveLS(usersArr);
+        myShopCart = usersArr
+        .find((users) => users.user === currentUser)
+        .shopCart;
+        showHTMLShopCart();
+        showMyShopCart(myShopCart);
+
+}
 //Función para quitar del carrito.
 function removeShopCart(id) {
     let removeStock = usersArr.find(users => users.user === currentUser).shopCart.find(item => item.id === id);
-    console.log(removeStock.stock);
     if (removeStock.stock - 1 != 0) {
         removeStock.stock--;
         products.find(el => el.id === id).stock++;
@@ -353,7 +414,7 @@ function removeShopCart(id) {
         .find((users) => users.user === currentUser)
         .shopCart;
         showHTMLShopCart();
-        showMyShopCart(myShopCart)
+        showMyShopCart(myShopCart);
     } else {
         let objRemove = usersArr.find(users => users.user === currentUser).shopCart.findIndex(el => el.id === id);
         usersArr.find(users => users.user === currentUser).shopCart.splice(objRemove, 1);
@@ -365,7 +426,7 @@ function removeShopCart(id) {
         .find((users) => users.user === currentUser)
         .shopCart;
         showHTMLShopCart();
-        showMyShopCart(myShopCart)
+        showMyShopCart(myShopCart);
     }
 }
 //Si tengo productos en localStorage los carga en el array, sino los trae del .json.
@@ -477,6 +538,7 @@ btnPay.addEventListener("click", (e) => {
 //Realizar pago
 paid.addEventListener("click", (e) => {
     e.preventDefault();
+    validateCreditCard();
     Swal.fire({
         position: "center",
         icon: "success",

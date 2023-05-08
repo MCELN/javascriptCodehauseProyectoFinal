@@ -68,12 +68,12 @@ main .gridContainer .aside {
     grid-area: aside;
     display: flex;
     flex-direction: column;
-    margin: 7px;    
+    margin: 7px;
     border: 1px solid black;
     padding: 10px;
 }
 
-main .gridContainer .aside{
+main .gridContainer .aside {
     display: flex;
     flex-direction: column;
     margin: 7px;
@@ -196,10 +196,11 @@ main .gridContainer .productos .boxProduc .buy {
 
 .shopCartBox p {
     font-size: 25px;
+
 }
 
 .shopCartBox .pricePrd {
-    display:flex;
+    display: flex;
     flex-direction: column;
     align-items: center;
     font-weight: 600;
@@ -213,7 +214,8 @@ main .gridContainer .productos .boxProduc .buy {
     margin: 20px auto;
 }
 
-.form-control input, input[type="date"] {
+.form-control input,
+input[type="date"] {
     font-size: 1.3rem;
 }
 
@@ -226,13 +228,29 @@ main .gridContainer .productos .boxProduc .buy {
     font-size: 50px;
 }
 
+.modifyQuantity {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
 .quantity {
     display: flex;
     align-items: center;
 }
 
-.removePrd {
+.removeAll {
+    background-color: red;
+    color: white;
+    font-size: 30px;
+    padding: 10px;
+}
+
+
+.buttonAddRem {
     text-decoration: none;
+    background-color: black;
+    color: white;
     border: 1px solid black;
     padding: 3px;
     font-size: 30px;
@@ -241,9 +259,10 @@ main .gridContainer .productos .boxProduc .buy {
 
 .pay {
     display: flex;
-    justify-content:space-around;
+    justify-content: space-around;
     margin-bottom: 50px;
 }
+
 .btnPay {
     background-color: rgb(68, 68, 245);
     color: white;
